@@ -34,4 +34,11 @@ public class UserServiceImpl implements UserService {
         userRepo.findAll().forEach(mongoUsersToReturn::add);
         return mongoUsersToReturn.stream().map(userMapper::mongoUserToDto).collect(Collectors.toList());
     }
+
+    @Override
+    public UserDto updateUser(UserDto userDto) {
+        MongoUser mongoUser = userMapper.userDtoToMongoUser(userDto);
+        userRepo.save(mongoUser);
+        return userMapper.mongoUserToDto(mongoUser);
+    }
 }

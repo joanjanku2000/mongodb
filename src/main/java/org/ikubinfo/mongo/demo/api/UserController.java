@@ -21,6 +21,11 @@ public class UserController {
         return ResponseEntity.ok(userService.createUser(userDto));
     }
 
+    @PutMapping
+    public ResponseEntity<UserDto> updateUser(@RequestBody UserDto userDto){
+        return ResponseEntity.ok(userService.updateUser(userDto));
+    }
+
     @GetMapping
     public ResponseEntity<List<UserDto>> findAll(){
         return ResponseEntity.ok(userService.findAll());
