@@ -1,0 +1,2 @@
+// Makes Username be unique by creating an index
+db.app_user.createIndex({username: 1}, {unique:true})
