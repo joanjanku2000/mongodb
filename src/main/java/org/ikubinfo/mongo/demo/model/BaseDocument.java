@@ -1,6 +1,6 @@
 package org.ikubinfo.mongo.demo.model;
 
-public class BaseDocument {
+public abstract class BaseDocument {
     private String id;
 
 

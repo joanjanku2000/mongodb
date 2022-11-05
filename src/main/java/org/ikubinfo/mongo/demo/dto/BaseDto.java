@@ -1,6 +1,6 @@
 package org.ikubinfo.mongo.demo.dto;
 
-public class BaseDto {
+public abstract class BaseDto {
     private String id;
 
     public String getId() {
