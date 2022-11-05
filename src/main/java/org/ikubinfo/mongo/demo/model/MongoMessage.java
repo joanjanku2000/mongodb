@@ -10,8 +10,7 @@ import java.time.LocalDateTime;
 
 
 @Document(collection = "app_message")
-public class MongoMessage {
-    private String id;
+public class MongoMessage extends BaseDocument {
     private String message;
     private MessageUser user;
     @JsonFormat(shape = JsonFormat.Shape.STRING, pattern = "yyyy-MM=dd'T'HH:mm")
@@ -19,14 +18,6 @@ public class MongoMessage {
 
     public MongoMessage() {
         super();
-    }
-
-    public String getId() {
-        return id;
-    }
-
-    public void setId(String id) {
-        this.id = id;
     }
 
     public String getMessage() {

@@ -1,6 +1,6 @@
 package org.ikubinfo.mongo.demo.dto;
 
-public class MessageDto {
+public class MessageDto extends BaseDto {
     private String message;
     private UserDto user;
 
@@ -23,4 +23,6 @@ public class MessageDto {
     public void setUser(UserDto user) {
         this.user = user;
     }
+
+
 }

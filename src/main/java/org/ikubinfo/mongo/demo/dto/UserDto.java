@@ -1,23 +1,13 @@
 package org.ikubinfo.mongo.demo.dto;
 
 
-public class UserDto {
-
-    private String id;
+public class UserDto extends BaseDto {
     private String name;
     private String lastName;
     private String username;
 
     public UserDto() {
         super();
-    }
-
-    public String getId() {
-        return id;
-    }
-
-    public void setId(String id) {
-        this.id = id;
     }
 
     public String getName() {

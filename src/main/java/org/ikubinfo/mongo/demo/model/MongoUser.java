@@ -7,8 +7,7 @@ import java.time.LocalDateTime;
 import java.util.List;
 
 @Document(collection = "app_user")
-public class MongoUser {
-    private String id;
+public class MongoUser  extends BaseDocument{
     private String name;
     private String lastName;
     private String username;
@@ -17,15 +16,9 @@ public class MongoUser {
     private List<MongoUser> friends;
 
     public MongoUser() {
+        super();
     }
 
-    public String getId() {
-        return id;
-    }
-
-    public void setId(String id) {
-        this.id = id;
-    }
 
     public String getName() {
         return name;
